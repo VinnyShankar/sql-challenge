@@ -53,45 +53,61 @@ CREATE TABLE salaries (
 
 -- COPY CSV DATA INTO TABLES
 
-CREATE TABLE departments (
-    dept_no VARCHAR(4) PRIMARY KEY NOT NULL,
-    dept_name VARCHAR(30) NOT NULL
-);
+-- Departments
+COPY departments (dept_no,
+				  dept_name)
+FROM 'D:\data\departments.csv'
+DELIMITER ','
+CSV HEADER;
 
-CREATE TABLE titles (
-    title_id VARCHAR(5) PRIMARY KEY NOT NULL,
-    title VARCHAR(30) NOT NULL
-);
+SELECT * FROM departments;
 
-CREATE TABLE employees (
-    emp_no INT PRIMARY KEY NOT NULL,
-    emp_title_id varchar(5) NOT NULL,
-    birth_date date NOT NULL,
-    first_name varchar(30) NOT NULL,
-    last_name varchar(30) NOT NULL,
-    sex varchar(30) NOT NULL,
-    hire_date date NOT NULL,
-    FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
-);
+-- Titles
+COPY titles (title_id,
+			 title)
+FROM 'D:\data\titles.csv'
+DELIMITER ','
+CSV HEADER;
 
-CREATE TABLE dept_emp (
-    emp_no INT NOT NULL,
-    dept_no VARCHAR(30)   NOT NULL,
-	PRIMARY KEY (emp_no, dept_no),
-	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
-);
+SELECT * FROM titles;
 
-CREATE TABLE dept_manager (
-    dept_no VARCHAR(30) NOT NULL,
-    emp_no INT NOT NULL,
-	PRIMARY KEY (dept_no, emp_no),
-	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
-);
+-- Employees
+COPY employees (emp_no,
+				emp_title_id,
+				birth_date,
+				first_name,
+				last_name,
+				sex,
+				hire_date)
+FROM 'D:\data\employees.csv'
+DELIMITER ','
+CSV HEADER;
 
-CREATE TABLE salaries (
-    emp_no INT PRIMARY KEY NOT NULL,
-    salary DEC NOT NULL,
-    FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
-);
+SELECT * FROM employees LIMIT 10;
+
+-- Department employees
+COPY dept_emp (emp_no,
+			   dept_no)
+FROM 'D:\data\dept_emp.csv'
+DELIMITER ','
+CSV HEADER;
+
+SELECT * FROM dept_emp LIMIT 10;
+
+-- Department managers
+COPY dept_manager (dept_no,
+				   emp_no)
+FROM 'D:\data\dept_manager.csv'
+DELIMITER ','
+CSV HEADER;
+
+SELECT * FROM dept_manager;
+
+-- Salaries
+COPY salaries (emp_no,
+			   salary)
+FROM 'D:\data\salaries.csv'
+DELIMITER ','
+CSV HEADER;
+
+SELECT * FROM salaries;
