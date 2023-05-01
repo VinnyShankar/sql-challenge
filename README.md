@@ -31,18 +31,18 @@
 ### - Data Analysis Preview
 - The following screenshots show previews of the SQL Queries' outputs.
 - `Query 1`: List the employee number, last name, first name, sex, and salary of each employee          
-![image](EmployeeSQL/query_ouput_images/query_01.jpg)
+![image](EmployeeSQL/query_ouput_images/query_01.jpg "Query 1")
 - `Query 2`: List the first name, last name, and hire date for the employees who were hired in 1986         
-![image](EmployeeSQL/query_ouput_images/query_02.jpg)
+![image](EmployeeSQL/query_ouput_images/query_02.jpg "Query 2")
 - `Query 3`: List the manager of each department along with their department number, department name, employee number, last name, and first name            
-![image](EmployeeSQL/query_ouput_images/query_03.jpg)
+![image](EmployeeSQL/query_ouput_images/query_03.jpg "Query 3")
 - `Query 4`: List the department number for each employee along with that employee’s employee number, last name, first name, and department name            
-![image](EmployeeSQL/query_ouput_images/query_04.jpg)
+![image](EmployeeSQL/query_ouput_images/query_04.jpg "Query 4")
 - `Query 5`: List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B         
-![image](EmployeeSQL/query_ouput_images/query_05.jpg)
+![image](EmployeeSQL/query_ouput_images/query_05.jpg "Query 5")
 - `Query 6`: List each employee in the Sales department, including their employee number, last name, and first name         
-![image](EmployeeSQL/query_ouput_images/query_06.jpg)
+![image](EmployeeSQL/query_ouput_images/query_06.jpg "Query 6")
 - `Query 7`: List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name           
-![image](EmployeeSQL/query_ouput_images/query_07.jpg)
+![image](EmployeeSQL/query_ouput_images/query_07.jpg "Query 7")
 - `Query 8`: List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name)          
-![image](EmployeeSQL/query_ouput_images/query_08.jpg)
+![image](EmployeeSQL/query_ouput_images/query_08.jpg "Query 8")
