@@ -9,15 +9,23 @@
     - Instructor: Ahmad Sweed
     - TA: Brian Perry
     - Tutor: Bethany Lindberg
+### - Tools used
+- [PostgreSQL](https://www.postgresql.org/)
+- [pgAdmin](https://www.pgadmin.org/)
+- [Quick Database Diagrams](https://www.quickdatabasediagrams.com/)
 ### - Contents
 - One folder containing:
     * An Image file of Entity Relationship Diagram (ERD)
     * A .sql file of Table Schemata
     * A .sql file of SQL Queries
     * A folder containing screenshots of SQL Query outputs
+    * A data folder containing the six csv files used to populate the tables
 - .gitignore file
 - This README.md file
 ### - Data Engineering:
+- **NOTE: The Table Schemata uses specific file paths to copy the csv data into tables. These file paths will need to be modified depending on the user who is running the Table Schemata script.**         
+![image](EmployeeSQL/query_ouput_images/copy_example.jpg "Query 1")
+
 - The Table Schemata file creates six tables that describe the organizational structure of a fictional company called "Pewlett Hackard." The tables are:
     * Departments
     * Titles
@@ -25,9 +33,9 @@
     * Department Employees
     * Department Managers
     * Salaries
-- Entity Relationship Diagram (ERD)
+- Entity Relationship Diagram (ERD) - made using [Quick Database Diagrams](https://www.quickdatabasediagrams.com/)
 ![ERD](EmployeeSQL/entity_relationship_diagram.png "EmployeeSQL ERD CHART")
-- The Table Schemata also populates each table with data by copying from six .csv files (these files are not included in the repository).
+- The Table Schemata also populates each table with data by copying from six .csv files (these files are in the data folder).
 ### - Data Analysis Preview
 - The following screenshots show previews of the SQL Queries' outputs.
 - `Query 1`: List the employee number, last name, first name, sex, and salary of each employee          
